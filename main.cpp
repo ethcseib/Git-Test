@@ -3,6 +3,7 @@
 using namespace std;
 
 int sum(int);
+int product(int);
 
 int main(){
 
@@ -11,7 +12,8 @@ int main(){
   cout<< "Provide a number ";
   cin>> n;
 
-  cout<< "The sum = " << sum(n) << endl;
+  cout<< "\nThe sum = " << sum(n) << endl;
+  cout<< "\nThe product of the set of numbers from 1 to " << n << " = " << product(n) << endl;
   
   return 0;
 }
@@ -23,5 +25,15 @@ int sum(int n){
   for(int i = 1; i <= n; i++)
     sum += i;
 
+  return sum;
+}
+
+int product(int n){
+
+  int sum = 1;
+
+  for (int i = 1; i <= n; i++)
+    sum *= i;
+  
   return sum;
 }
